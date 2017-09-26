@@ -1,0 +1,39 @@
+<p class="text-center">
+  <span class="badge badge-pill badge-primary">{{ total }} Sistemas Carregados</span>
+</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Sistema/Descrição</th>
+      <th>Ger. Desenv.</th>
+      <th>Ger. Prod.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sistema of sistemas" class="align-middle">
+      <td>{{ sistema.idSistema }}</td>
+      <td>
+        <h4>{{ sistema?.sgSistema }} {{ sistema?.nmSistema }} {{ sistema?.apelidoSistema }}</h4>
+        <p>{{ sistema.descSistema }}</p>
+      </td>
+      <td>{{ sistema.gerenteDesenvolvimento }}</td>
+      <td>{{ sistema.gerenteProducao }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav> -->

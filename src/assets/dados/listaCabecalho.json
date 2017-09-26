@@ -1,0 +1,65 @@
+[
+  {
+    "Codigo": "S1",
+    "Tipo": "Sistema",
+    "TipoReal": null,
+    "Quantidade": 322,
+    "idStatus": 231,
+    "idTipo": 0,
+    "Descricao": "ativo"
+  },
+  {
+    "Codigo": "S2",
+    "Tipo": "Sistema",
+    "TipoReal": null,
+    "Quantidade": 169,
+    "idStatus": 232,
+    "idTipo": 0,
+    "Descricao": "ativo (desativação a planejar)"
+  },
+  {
+    "Codigo": "S3",
+    "Tipo": "Sistema",
+    "TipoReal": null,
+    "Quantidade": 41,
+    "idStatus": 233,
+    "idTipo": 0,
+    "Descricao": "ativo (desativação planejada)"
+  },
+  {
+    "Codigo": "S4",
+    "Tipo": "Sistema",
+    "TipoReal": null,
+    "Quantidade": 556,
+    "idStatus": 234,
+    "idTipo": 0,
+    "Descricao": "desativado"
+  },
+  {
+    "Codigo": "S5",
+    "Tipo": "Sistema",
+    "TipoReal": null,
+    "Quantidade": 38,
+    "idStatus": 235,
+    "idTipo": 0,
+    "Descricao": "fora de escopo"
+  },
+  {
+    "Codigo": "F1",
+    "Tipo": "Ferramenta",
+    "TipoReal": null,
+    "Quantidade": 258,
+    "idStatus": 231,
+    "idTipo": 0,
+    "Descricao": "ativo"
+  },
+  {
+    "Codigo": "F2",
+    "Tipo": "Ferramenta",
+    "TipoReal": null,
+    "Quantidade": 29,
+    "idStatus": 234,
+    "idTipo": 0,
+    "Descricao": "desativado"
+  }
+]
