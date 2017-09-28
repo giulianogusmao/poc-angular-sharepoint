@@ -17,8 +17,11 @@ export class Helper {
     }
 
     const sr = server === 'assets' ? `${url[server]}${api}` : `http://${url[server]}/webapi/api/${api}`;
-    console.log(sr);
     return sr;
+  }
+
+  static numberToStr(target: string | number, casas: number = 2): string {
+    return Number(target).toFixed(casas).toString().replace(/\./g, ',');
   }
 
 }
