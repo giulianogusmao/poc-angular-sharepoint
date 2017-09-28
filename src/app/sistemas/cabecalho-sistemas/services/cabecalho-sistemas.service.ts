@@ -8,7 +8,7 @@ export class CabecalhoSistemasService extends LoadService<Cabecalho, CabecalhoPa
 
   loadLista() {
     // return super.loadLista('listaCabecalho.json', 'assets');
-    return super.loadLista('ListaSistemas/Cabecalho', 'sopher');
+    return super.loadLista('ListaSistemas/Cabecalho');
   }
 
   createInstance(item: CabecalhoParcial): Cabecalho {

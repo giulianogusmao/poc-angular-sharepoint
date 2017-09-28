@@ -19,8 +19,10 @@ export abstract class LoadService<Model, ModelParcial> {
     return ([] as Model[]).concat(this._lista);
   }
 
-  loadLista(api: string, server?: string) {
-    return this._http.get(Helper.apiUrl(api, server))
+  loadLista(api: string, dados?: any): Observable<Model[]> {
+    const observable = dados ? this._http.post(Helper.apiUrl(api), dados) : this._http.get(Helper.apiUrl(api));
+
+    return observable
     .map((res: Response) =>
       this._lista = res
         .json()

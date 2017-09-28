@@ -8,7 +8,7 @@ export class ListaSistemasService extends LoadService<Sistema, SistemaParcial> {
 
   loadLista() {
     // return super.loadLista('listaSistemas.json', 'assets');
-    return super.loadLista('ListaSistemas/ListaCompleta', 'sopher');
+    return super.loadLista('ListaSistemas/ListaCompleta');
   }
 
   createInstance(item: SistemaParcial): Sistema {

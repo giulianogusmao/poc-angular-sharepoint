@@ -1,6 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/Rx';
-import 'rxjs/add/operator/map';
+import { Component } from '@angular/core';
+import { LoadComponent } from '../../shared/index';
 
 import { CabecalhoSistemasService } from './services/index';
 import { Cabecalho } from './models/index';
@@ -11,26 +10,17 @@ import { Cabecalho } from './models/index';
   styleUrls: ['./cabecalho-sistemas.component.scss'],
   providers: [CabecalhoSistemasService]
 })
-export class CabecalhoSistemasComponent implements OnInit, OnDestroy {
+export class CabecalhoSistemasComponent extends LoadComponent<Cabecalho> {
   public cabecalhos: Cabecalho[] = [];
-  private _inscricao: Subscription;
 
   constructor(
-    private _cabecalhoService: CabecalhoSistemasService
-  ) { }
-
-  ngOnInit() {
-    this._inscricao = this._cabecalhoService
-      .loadLista()
-      .subscribe(() => this.getCabecalhos());
+    protected cabecalhoService: CabecalhoSistemasService
+  ) {
+    super(cabecalhoService);
   }
 
-  getCabecalhos() {
-    this.cabecalhos = this._cabecalhoService.lista;
-  }
-
-  ngOnDestroy() {
-    this._inscricao.unsubscribe();
+  completeLoad() {
+    this.cabecalhos = this.dados;
   }
 
 }
